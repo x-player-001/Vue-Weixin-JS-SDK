@@ -10,7 +10,9 @@
 
 
 # 告知
-该项目只是为了试验在 vue 中调用企业微信 JS-SDK 能否成功，所以只测试了"选人接口"这一个接口
+1、该项目只是为了试验在 vue 中调用企业微信 JS-SDK 能否成功，所以只测试了"选人接口"这一个接口
+2、项目关于微信 JS-SDK 的部分全都封装在 src/weixin/weixin.js 中，并在 views/sendmsg/SendMsg.vue 进行调用
+3、该项目使用了 Vant 框架
 
 # 注意点
 调用 JS-SDK 流程：
