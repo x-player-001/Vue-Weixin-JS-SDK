@@ -1,0 +1,7 @@
+@import 'normalize.css';
+body {
+  min-width: 350px;
+  max-width: 750px;
+  margin: auto !important;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
