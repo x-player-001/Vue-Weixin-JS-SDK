@@ -3,24 +3,24 @@
 
 
 # 项目的准备工作
-1、注册一个企业微信，或有现有的企业微信并有管理员权限
-2、注册一个域名（接口授权域名需用到）
-3、能够部署项目的服务器（该项目是试用的腾讯云服务器，试用期一个月 2020-11-30 到期），并将域名解析到该服务器 IP 地址
-4、企业微信官方 API 地址：https://work.weixin.qq.com/api/doc/90000/90136/90512
+1、注册一个企业微信，或有现有的企业微信并有管理员权限  
+2、注册一个域名（接口授权域名需用到）  
+3、能够部署项目的服务器（该项目是试用的腾讯云服务器，试用期一个月 2020-11-30 到期），并将域名解析到该服务器 IP 地址  
+4、企业微信官方 API 地址：https://work.weixin.qq.com/api/doc/90000/90136/90512  
 
 
 # 告知
-1、该项目只是为了试验在 vue 中调用企业微信 JS-SDK 能否成功，所以只测试了"选人接口"这一个接口
-2、项目关于微信 JS-SDK 的部分全都封装在 src/weixin/weixin.js 中，并在 views/sendmsg/SendMsg.vue 进行调用
-3、该项目使用了 Vant 框架
+1、该项目只是为了试验在 vue 中调用企业微信 JS-SDK 能否成功，所以只测试了"选人接口"这一个接口  
+2、项目关于微信 JS-SDK 的部分全都封装在 src/weixin/weixin.js 中，并在 views/sendmsg/SendMsg.vue 进行调用  
+3、该项目使用了 Vant 框架  
 
 # 注意点
-调用 JS-SDK 流程：
-1、在企业微信后台为域名配置权限
-2、调用 access_token 接口
-3、调用接口生成 JS-SDK 使用权限签名
-4、调用 wx.config
-5、调用相应的 JS 接口
+调用 JS-SDK 流程：  
+1、在企业微信后台为域名配置权限  
+2、调用 access_token 接口  
+3、调用接口生成 JS-SDK 使用权限签名  
+4、调用 wx.config  
+5、调用相应的 JS 接口  
 
 其中步骤 2、3 因涉及到企业 ID 等敏感信息，应由后台进行调用传给前端，该项目中为了方便测试在前端 JS 中完成
 
@@ -32,6 +32,6 @@
 
 
 # 踩过的坑
-1、JS-SDK 使用权限签名接口中 timestamp 单位是秒，可用 Date.parse(new Date()) / 1000 获取
-2、JS-SDK 使用权限签名接口获取当前 url 要去掉 # 后的部分，通过 window.location.href.split('#')[0] 获取
-3、报错提示 not match any relible domain，调用接口的网站域名要在后台设置权限，并在网站根目录放入证书
+1、JS-SDK 使用权限签名接口中 timestamp 单位是秒，可用 Date.parse(new Date()) / 1000 获取  
+2、JS-SDK 使用权限签名接口获取当前 url 要去掉 # 后的部分，通过 window.location.href.split('#')[0] 获取  
+3、报错提示 not match any relible domain，调用接口的网站域名要在后台设置权限，并在网站根目录放入证书  
